@@ -101,7 +101,7 @@
           <div class="row">
             <div class="credits ml-auto">
               <span class="copyright">
-                ©2018, made with <i class="fa fa-heart heart"></i> by AllTimProject
+                ©2018, 30814261 - Rico Ryan
               </span>
             </div>
           </div>

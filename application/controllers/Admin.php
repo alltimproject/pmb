@@ -262,8 +262,8 @@ class Admin extends CI_Controller
           'protocol'  => 'smtp',
           'mailpath'  => '/usr/sbin/sendmail',
           'smtp_host' => 'ssl://smtp.gmail.com',
-          'smtp_user' => 'viz.ndinq@gmail.com',   // Ganti dengan email gmail Anda.
-          'smtp_pass' => 'haviz06142',             // Password gmail Anda.
+          'smtp_user' => 'mawarpaud15@gmail.com',   // Ganti dengan email gmail Anda.
+          'smtp_pass' => 'paudmawar015',             // Password gmail Anda.
           'smtp_port' => 465,
           'smtp_keepalive' => TRUE,
           'smtp_crypto' => 'SSL',

@@ -63,7 +63,7 @@
             4
           </div>
           <div class="description">
-            <p>Find unique and handmade delightful designs related items directly from our sellers.</p>
+            <p>Menyiapkan anak didik ke jenjang pendidikan dasar dengan Kompentensi Dasar sesuai perkembangan anak.</p>
           </div>
         </div>
       </div>
@@ -79,12 +79,12 @@
         <div class="col-md-4">
                     <div class="card card-profile card-plain">
                         <div class="card-avatar">
-                            <a href="#avatar"><img src="<?= base_url().'images/GURU1.jpeg' ?>" alt="..."></a>
+                            <a><img src="<?= base_url().'images/Contoh1.jpeg' ?>" alt="..."></a>
                         </div>
                         <div class="card-body">
-                            <a href="#paper-kit">
+                            <a>
                                 <div class="author">
-                                    <h4 class="card-title">Oo Suyitno S.Pd, M.Pd</h4>
+                                    <h4 class="card-title">Suryatin, S.pd</h4>
                                     <h6 class="card-category">Kepala PAUD</h6>
                                 </div>
                             </a>
@@ -103,12 +103,12 @@
         <div class="col-md-4">
                     <div class="card card-profile card-plain">
                         <div class="card-avatar">
-                            <a href="#avatar"><img src="<?= base_url().'images/GURU2.jpeg' ?>" alt="..."></a>
+                            <a><img src="<?= base_url().'images/Contoh2.jpeg' ?>" alt="..."></a>
                         </div>
                         <div class="card-body">
-                            <a href="#paper-kit">
+                            <a>
                                 <div class="author">
-                                    <h4 class="card-title">Lismayanti S.Pd</h4>
+                                    <h4 class="card-title">Amin Warsini, S.pd</h4>
                                     <h6 class="card-category">Guru Kelas Pagi</h6>
                                 </div>
                             </a>
@@ -127,12 +127,12 @@
         <div class="col-md-4">
                     <div class="card card-profile card-plain">
                         <div class="card-avatar">
-                            <a href="#avatar"><img src="<?= base_url().'images/GURU3.jpeg' ?>" alt="..."></a>
+                            <a><img src="<?= base_url().'images/Contoh3.jpeg' ?>" alt="..."></a>
                         </div>
                         <div class="card-body">
-                            <a href="#paper-kit">
+                            <a>
                                 <div class="author">
-                                    <h4 class="card-title">Puji Astuti S.Pd</h4>
+                                    <h4 class="card-title">Subur Isnawati, S.Pd</h4>
                                     <h6 class="card-category">Guru Kelas Siang</h6>
                                 </div>
                             </a>
@@ -210,7 +210,7 @@
   				</nav>
   				<div class="credits ml-auto">
   					<span class="copyright">
-  						© <?= date('Y') ?>, made with <i class="fa fa-heart heart"></i> by AllTimProject
+  						© <?= date('Y') ?>, 30814261 - Rico Ryan
   					</span>
   				</div>
   			</div>

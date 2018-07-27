@@ -34,19 +34,13 @@
           <div class="collapse navbar-collapse" id="navbarToggler">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
-                          <i class="fa fa-twitter"></i>
-                          <p class="d-lg-none">Twitter</p>
+                      <a class="nav-link" rel="tooltip" title="Contact us at Whatsapp" data-placement="bottom" href="https://api.whatsapp.com/send?phone=6282239946084&text=Hi%20PAUD%20Mawar%Rw015" target="_blank">
+                          <i class="fa fa-whatsapp"></i>
+                          <p class="d-lg-none">Whatsapp</p>
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
-                          <i class="fa fa-facebook-square"></i>
-                          <p class="d-lg-none">Facebook</p>
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+                      <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/ricoryannn/" target="_blank">
                           <i class="fa fa-instagram"></i>
                           <p class="d-lg-none">Instagram</p>
                       </a>
