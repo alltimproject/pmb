@@ -5,8 +5,8 @@
     <title></title>
   </head>
   <body>
-    <h3>Hi, <?= $nama_wali ?></h3>
-    <p>Selamat!!! Murid atas nama <b><?= $nama_murid ?></b> sudah diterima di PAUD MAWAR 015.</p>
+    <h3>Kepada YTH, <?= $nama_wali ?></h3>
+    <p>Sehubungan dengan adanya penerimaan murid baru di PAUD Mawar 015, dengan ini kami sampaikan bahwa Calon Murid atas nama <b><?= $nama_murid ?></b> sudah diterima di PAUD MAWAR 015.</p>
     <p>Segera kunjungi PAUD MAWAR 015 untuk melakukan Verifikasi dengan membawa Persyaratan sebagai berikut : </p>
     <ul>
       <li>Bukti Penerimaan</li>

@@ -30,7 +30,7 @@
               <input type="text" name="nama_murid" id="nama_murid" class="form-control">
             </div>
             <div class="form-group">
-              <label>Tempat</label>
+              <label>Tempat Lahir</label>
               <input type="text" name="tempat_lahir" id="tempat_lahir" class="form-control">
             </div>
             <div class="form-group">
@@ -134,7 +134,7 @@
             $.each(data.pendaftaran, function(k,v){
               var sisa = v.kuota_murid - v.diterima;
               html += `<div class="jumbotron">`;
-              html += `<h3>PENDAFTARAN TAHUN AJARAN ${v.tahun_awal} - ${v.tahun_akhir}</h3>`;
+              html += `<h3>PENDAFTARAN MURID BARU TAHUN AJARAN ${v.tahun_awal} - ${v.tahun_akhir}</h3>`;
               html += `<table>`;
                 html += `<tr>`;
                   html += `<td><h6>Periode</h6></td>`;
@@ -169,6 +169,29 @@
       $('#welcome').hide(function(){
         $('.content-form').show();
       });
+    });
+
+    $('#tanggal_lahir').on('change', function(){
+      var tgl = $(this).val();
+      var tgl_sekarang = new Date();
+      var tgl_lahir = new Date(tgl);
+      var jam = 24*60*60*1000*365;
+      var umur = parseFloat(parseFloat(tgl_sekarang - tgl_lahir)/jam);
+
+      if(umur <= 4)
+      {
+        toastr.error('Umur tidak memenuhi persyaratan', 'Error');
+        $(this).val('');
+      } else if(umur >= 5)
+      {
+        toastr.error('Umur melebihi persyaratan', 'Error');
+        $(this).val('');
+      } else {
+        toastr.success('Umur memenuhi persyaratan', 'Success');
+      }
+
+      // alert(umur);
+
     });
 
     $('#batal').on('click', function(){

@@ -2,7 +2,8 @@
   <div class="filter"></div>
   <div class="container">
       <div class="motto text-center">
-          <h1 class="animated bounceInDown">PAUD Mawar 015</h1>
+          <img src="<?= base_url().'images/PAUD2.png' ?>" alt="" style="width: 200px; height:200px;">
+          <h1 class="animated bounceInDown">PAUD MAWAR 015</h1>
           <h3 class="animated zoomIn">Pendaftaran dan Penerimaan Murid Baru</h3>
           <br />
           <a href="#login" class="btn btn-outline-primary btn-round animated bounceInLeft"><i class="fa  fa-sign-in"></i> Masuk</a>

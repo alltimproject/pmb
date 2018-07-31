@@ -14,7 +14,7 @@
             </tr>
             <tr>
               <td valign="top">-</td>
-              <td>Cetak Bukti Penerimaan, lalu segera kunjungi PAUD Mawar 015 untuk melakukan Verifikasi dengan membawa Bukti Penerimaan, KTP, KK dan Akta Kelahiran.</td>
+              <td>Cetak Bukti Penerimaan, lalu segera kunjungi PAUD Mawar 015 untuk melakukan Verifikasi dengan membawa Bukti Penerimaan, KTP, KK, dan Akte Kelahiran</td>
             </tr>
           </table>
       </span>
