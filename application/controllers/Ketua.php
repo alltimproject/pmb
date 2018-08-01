@@ -69,18 +69,57 @@ class Ketua extends CI_Controller
     $where = array(
       'd.id_tahun_ajar' => $id_tahun
     );
-		$data['title'] = 'Data Pendaftar';
-    $data['header'] = 'Data Pendaftar';
-		$data['data'] = $this->m_main->show_pendaftaran(null, $where)->result();
-    $data['jumlah'] = $this->m_main->show_pendaftaran(null, $where)->num_rows();
-		$html = $this->load->view('ketua/v_export', $data, TRUE);
 
-		$this->load->library('pdf');
-		$pdf = $this->pdf->load();
-		$pdf->SetProtection(array('print'));
-		$pdf->SetDisplayMode('fullpage');
-		$pdf->WriteHTML($html);
-		$pdf->Output("Data_Pendaftar_$id_tahun.pdf" ,'I');
+		$data = $this->m_main->show_pendaftaran(null, $where);
+
+    $this->load->library('pdf');
+		$pdf = new FPDF('L','mm','A4');
+		$pdf->AddPage();
+
+		$pdf->Image('images/PAUD2.png',10,10,30,30);
+		$pdf->SetFont('Arial','B',18);
+		$pdf->Cell(120);
+		$pdf->Cell(30,15,'BKB - PAUD MAWAR 015',0,1,'C');
+
+		$pdf->SetFont('Arial','B',10);
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Jl. Gang Pioneer RT. 003 / RW. 015',0,1,'C');
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Kota Administrasi Jakarta Utara 14440',0,1,'C');
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Telp. 0812 8290 3430, 0877 8055 2501',0,1,'C');
+		$pdf->ln(5);
+		$pdf->Cell(280,0,'',1,0,'C');
+		$pdf->ln(5);
+
+    $pdf->SetFont('Arial','B',13);
+    $pdf->Cell(0,5,'Data Pendaftar',0,0);
+    $pdf->ln(10);
+    $pdf->SetFont('Arial','B',10);
+    $pdf->Cell(45,7,'ID Daftar',1,0,'C');
+    $pdf->Cell(45,7,'Nama',1,0,'C');
+    $pdf->Cell(45,7,'Jalur',1,0,'C');
+    $pdf->Cell(45,7,'Nama Wali',1,0,'C');
+    $pdf->Cell(45,7,'Periode',1,0,'C');
+    $pdf->Cell(45,7,'Tanggal Daftar',1,0,'C');
+
+    foreach($data->result() as $key){
+      $pdf->SetFont('Arial','',10);
+      $pdf->ln();
+      $pdf->Cell(45,7,$key->id_daftar,1,0,'C');
+      $pdf->Cell(45,7,$key->nama_murid,1,0,'C');
+      $pdf->Cell(45,7,$key->jalur,1,0,'C');
+      $pdf->Cell(45,7,$key->nama_wali,1,0,'C');
+      $pdf->Cell(45,7,$key->tahun_awal.'-'.$key->tahun_akhir,1,0,'C');
+      $pdf->Cell(45,7,date('d M Y H:i:s', strtotime($key->tanggal_daftar)),1,0,'C');
+    }
+
+    $pdf->ln(20);
+    $pdf->Cell(230);
+    $pdf->Cell(40, 7, 'Jumlah Pendaftar : '.$data->num_rows(),0,0);
+
+    $pdf->Output();
+
   }
 
   function export_terima($id_tahun)
@@ -89,18 +128,56 @@ class Ketua extends CI_Controller
       'a.status' => 'Terima',
       'd.id_tahun_ajar' => $id_tahun
     );
-		$data['title'] = 'Data Pendaftar Diterima';
-    $data['header'] = 'Data Pendaftar Diterima';
-		$data['data'] = $this->m_main->show_pendaftaran(null, $where)->result();
-    $data['jumlah'] = $this->m_main->show_pendaftaran(null, $where)->num_rows();
-		$html = $this->load->view('ketua/v_export', $data, TRUE);
 
-		$this->load->library('pdf');
-		$pdf = $this->pdf->load();
-		$pdf->SetProtection(array('print'));
-		$pdf->SetDisplayMode('fullpage');
-		$pdf->WriteHTML($html);
-		$pdf->Output("Data_Diterima_$id_tahun.pdf" ,'I');
+		$data = $this->m_main->show_pendaftaran(null, $where);
+
+    $this->load->library('pdf');
+		$pdf = new FPDF('L','mm','A4');
+		$pdf->AddPage();
+
+		$pdf->Image('images/PAUD2.png',10,10,30,30);
+		$pdf->SetFont('Arial','B',18);
+		$pdf->Cell(120);
+		$pdf->Cell(30,15,'BKB - PAUD MAWAR 015',0,1,'C');
+
+		$pdf->SetFont('Arial','B',10);
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Jl. Gang Pioneer RT. 003 / RW. 015',0,1,'C');
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Kota Administrasi Jakarta Utara 14440',0,1,'C');
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Telp. 0812 8290 3430, 0877 8055 2501',0,1,'C');
+		$pdf->ln(5);
+		$pdf->Cell(280,0,'',1,0,'C');
+		$pdf->ln(5);
+
+    $pdf->SetFont('Arial','B',13);
+    $pdf->Cell(0,5,'Data Pendaftar Diterima',0,0);
+    $pdf->ln(10);
+    $pdf->SetFont('Arial','B',10);
+    $pdf->Cell(45,7,'ID Daftar',1,0,'C');
+    $pdf->Cell(45,7,'Nama',1,0,'C');
+    $pdf->Cell(45,7,'Jalur',1,0,'C');
+    $pdf->Cell(45,7,'Nama Wali',1,0,'C');
+    $pdf->Cell(45,7,'Periode',1,0,'C');
+    $pdf->Cell(45,7,'Tanggal Daftar',1,0,'C');
+
+    foreach($data->result() as $key){
+      $pdf->SetFont('Arial','',10);
+      $pdf->ln();
+      $pdf->Cell(45,7,$key->id_daftar,1,0,'C');
+      $pdf->Cell(45,7,$key->nama_murid,1,0,'C');
+      $pdf->Cell(45,7,$key->jalur,1,0,'C');
+      $pdf->Cell(45,7,$key->nama_wali,1,0,'C');
+      $pdf->Cell(45,7,$key->tahun_awal.'-'.$key->tahun_akhir,1,0,'C');
+      $pdf->Cell(45,7,date('d M Y H:i:s', strtotime($key->tanggal_daftar)),1,0,'C');
+    }
+
+    $pdf->ln(20);
+    $pdf->Cell(230);
+    $pdf->Cell(40, 7, 'Jumlah Diterima : '.$data->num_rows(),0,0);
+
+    $pdf->Output();
   }
 
   function export_tolak($id_tahun)
@@ -109,18 +186,55 @@ class Ketua extends CI_Controller
       'a.status' => 'Tolak',
       'd.id_tahun_ajar' => $id_tahun
     );
-		$data['title'] = 'Data Pendaftar Ditolak';
-    $data['header'] = 'Data Pendaftar Ditolak';
-		$data['data'] = $this->m_main->show_pendaftaran(null, $where)->result();
-    $data['jumlah'] = $this->m_main->show_pendaftaran(null, $where)->num_rows();
-		$html = $this->load->view('ketua/v_export', $data, TRUE);
+		$data = $this->m_main->show_pendaftaran(null, $where);
 
-		$this->load->library('pdf');
-		$pdf = $this->pdf->load();
-		$pdf->SetProtection(array('print'));
-		$pdf->SetDisplayMode('fullpage');
-		$pdf->WriteHTML($html);
-		$pdf->Output("Data_Ditolak_$id_tahun.pdf" ,'I');
+    $this->load->library('pdf');
+		$pdf = new FPDF('L','mm','A4');
+		$pdf->AddPage();
+
+		$pdf->Image('images/PAUD2.png',10,10,30,30);
+		$pdf->SetFont('Arial','B',18);
+		$pdf->Cell(120);
+		$pdf->Cell(30,15,'BKB - PAUD MAWAR 015',0,1,'C');
+
+		$pdf->SetFont('Arial','B',10);
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Jl. Gang Pioneer RT. 003 / RW. 015',0,1,'C');
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Kota Administrasi Jakarta Utara 14440',0,1,'C');
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Telp. 0812 8290 3430, 0877 8055 2501',0,1,'C');
+		$pdf->ln(5);
+		$pdf->Cell(280,0,'',1,0,'C');
+		$pdf->ln(5);
+
+    $pdf->SetFont('Arial','B',13);
+    $pdf->Cell(0,5,'Data Pendaftar Ditolak',0,0);
+    $pdf->ln(10);
+    $pdf->SetFont('Arial','B',10);
+    $pdf->Cell(45,7,'ID Daftar',1,0,'C');
+    $pdf->Cell(45,7,'Nama',1,0,'C');
+    $pdf->Cell(45,7,'Jalur',1,0,'C');
+    $pdf->Cell(45,7,'Nama Wali',1,0,'C');
+    $pdf->Cell(45,7,'Periode',1,0,'C');
+    $pdf->Cell(45,7,'Tanggal Daftar',1,0,'C');
+
+    foreach($data->result() as $key){
+      $pdf->SetFont('Arial','',10);
+      $pdf->ln();
+      $pdf->Cell(45,7,$key->id_daftar,1,0,'C');
+      $pdf->Cell(45,7,$key->nama_murid,1,0,'C');
+      $pdf->Cell(45,7,$key->jalur,1,0,'C');
+      $pdf->Cell(45,7,$key->nama_wali,1,0,'C');
+      $pdf->Cell(45,7,$key->tahun_awal.'-'.$key->tahun_akhir,1,0,'C');
+      $pdf->Cell(45,7,date('d M Y H:i:s', strtotime($key->tanggal_daftar)),1,0,'C');
+    }
+
+    $pdf->ln(20);
+    $pdf->Cell(230);
+    $pdf->Cell(40, 7, 'Jumlah Ditolak : '.$data->num_rows(),0,0);
+
+    $pdf->Output();
   }
 
   function export_murid($id_tahun)
@@ -128,17 +242,55 @@ class Ketua extends CI_Controller
     $where = array(
       'e.id_tahun_ajar' => $id_tahun
     );
-		$data['title'] = 'Data Murid';
-		$data['data'] = $this->m_main->show_lapmurid($where)->result();
-    $data['jumlah'] = $this->m_main->show_lapmurid($where)->num_rows();
-		$html = $this->load->view('ketua/v_exmurid', $data, TRUE);
+		$data = $this->m_main->show_lapmurid($where);
 
-		$this->load->library('pdf');
-		$pdf = $this->pdf->load();
-		$pdf->SetProtection(array('print'));
-		$pdf->SetDisplayMode('fullpage');
-		$pdf->WriteHTML($html);
-		$pdf->Output("Data_Murid_$id_tahun.pdf" ,'I');
+    $this->load->library('pdf');
+		$pdf = new FPDF('L','mm','A4');
+		$pdf->AddPage();
+
+		$pdf->Image('images/PAUD2.png',10,10,30,30);
+		$pdf->SetFont('Arial','B',18);
+		$pdf->Cell(120);
+		$pdf->Cell(30,15,'BKB - PAUD MAWAR 015',0,1,'C');
+
+		$pdf->SetFont('Arial','B',10);
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Jl. Gang Pioneer RT. 003 / RW. 015',0,1,'C');
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Kota Administrasi Jakarta Utara 14440',0,1,'C');
+		$pdf->Cell(120);
+		$pdf->Cell(30,5,'Telp. 0812 8290 3430, 0877 8055 2501',0,1,'C');
+		$pdf->ln(5);
+		$pdf->Cell(280,0,'',1,0,'C');
+		$pdf->ln(5);
+
+    $pdf->SetFont('Arial','B',13);
+    $pdf->Cell(0,5,'Data Murid',0,0);
+    $pdf->ln(10);
+    $pdf->SetFont('Arial','B',10);
+    $pdf->Cell(45,7,'NIM',1,0,'C');
+    $pdf->Cell(45,7,'Nama',1,0,'C');
+    $pdf->Cell(45,7,'TTL',1,0,'C');
+    $pdf->Cell(45,7,'Jenis Kelamin',1,0,'C');
+    $pdf->Cell(45,7,'Kelas',1,0,'C');
+    $pdf->Cell(45,7,'Tanggal Diterima',1,0,'C');
+
+    foreach($data->result() as $key){
+      $pdf->SetFont('Arial','',10);
+      $pdf->ln();
+      $pdf->Cell(45,7,$key->nim,1,0,'C');
+      $pdf->Cell(45,7,$key->nama_murid,1,0,'C');
+      $pdf->Cell(45,7,$key->tempat_lahir_murid.', '.$key->tgl_lahir_murid,1,0,'C');
+      $pdf->Cell(45,7,$key->jenis_kelamin,1,0,'C');
+      $pdf->Cell(45,7,$key->nama_kelas,1,0,'C');
+      $pdf->Cell(45,7,date('d M Y H:i:s', strtotime($key->tanggal_terima)),1,0,'C');
+    }
+
+    $pdf->ln(20);
+    $pdf->Cell(230);
+    $pdf->Cell(40, 7, 'Jumlah Murid : '.$data->num_rows(),0,0);
+
+    $pdf->Output();
   }
 
 
