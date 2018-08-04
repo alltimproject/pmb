@@ -110,7 +110,7 @@
                             <a>
                                 <div class="author">
                                     <h4 class="card-title">Amin Warsini, S.pd</h4>
-                                    <h6 class="card-category">Guru Kelas Pagi</h6>
+                                    <h6 class="card-category">Sekertaris</h6>
                                 </div>
                             </a>
                             <p class="card-description text-center">
@@ -134,7 +134,7 @@
                             <a>
                                 <div class="author">
                                     <h4 class="card-title">Subur Isnawati, S.Pd</h4>
-                                    <h6 class="card-category">Guru Kelas Siang</h6>
+                                    <h6 class="card-category">Bendahara</h6>
                                 </div>
                             </a>
                             <p class="card-description text-center">
