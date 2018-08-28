@@ -62,6 +62,7 @@ class Akun extends CI_Controller {
         'jenis_kelamin' => $this->input->post('jenis_kelamin'),
         'pas_foto' => $upload['file']['file_name'],
         'jalur' => $this->input->post('jalur'),
+        'tanggal_daftar' => date('Y-m-d'),
         'id_wali' => $this->input->post('id_wali'),
         'id_persyaratan' => $this->input->post('id_persyaratan'),
         'status' => 'Proses'

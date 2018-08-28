@@ -126,7 +126,7 @@ class Main extends CI_Controller {
 			$pdf->ln();
 			$pdf->Cell(60,7,'('.$key->nama_wali.')',1,0,'C');
 			$pdf->Cell(60,7,'( Rico )',1,0,'C');
-			$pdf->Cell(60,7,'( Suryatin, S.Pd)',1,0,'C');
+			$pdf->Cell(60,7,'( Suryatin )',1,0,'C');
 
 		}
 
@@ -135,6 +135,6 @@ class Main extends CI_Controller {
 		// $pdf->Output("Bukti_Penerimaan.pdf" ,'I');
 	}
 
-
-
 }
+
+ ?>

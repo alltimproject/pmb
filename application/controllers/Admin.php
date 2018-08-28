@@ -312,7 +312,8 @@ class Admin extends CI_Controller
       'jenis_kelamin' => $this->input->post('jenis_kelamin'),
       'foto_murid' => $this->input->post('pas_foto'),
       'id_daftar' => $this->input->post('id_daftar'),
-      'id_kelas' => $this->input->post('id_kelas')
+      'id_kelas' => $this->input->post('id_kelas'),
+      'tanggal_terima' => date('Y-m-d')
     );
 
     $cek = $this->m_main->add_data('tb_murid', $data);

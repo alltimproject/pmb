@@ -27,7 +27,8 @@ class Auth extends CI_Controller
       'email' => $email,
       'password' => $password,
       'telepon' => $telepon,
-      'alamat' => $alamat
+      'alamat' => $alamat,
+      'tgl_registrasi' => date('Y-m-d')
     );
 
     $cek = $this->m_main->add_data('tb_wali_murid', $data);

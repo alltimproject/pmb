@@ -62,7 +62,7 @@
 	<script src="<?= base_url().'assets/vendor/toastr/build/toastr.min.js' ?>"></script>
   <script src="<?= base_url().'assets/paper-kit/js/paper-kit.js' ?>"></script>
 
-  <script type="text/javascript">
+   <script type="text/javascript">
     $(document).ready(function(){
       var href;
 

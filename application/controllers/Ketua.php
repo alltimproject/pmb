@@ -111,7 +111,7 @@ class Ketua extends CI_Controller
       $pdf->Cell(45,7,$key->jalur,1,0,'C');
       $pdf->Cell(45,7,$key->nama_wali,1,0,'C');
       $pdf->Cell(45,7,$key->tahun_awal.'-'.$key->tahun_akhir,1,0,'C');
-      $pdf->Cell(45,7,date('d M Y H:i:s', strtotime($key->tanggal_daftar)),1,0,'C');
+      $pdf->Cell(45,7,date('d M Y', strtotime($key->tanggal_daftar)),1,0,'C');
     }
 
     $pdf->ln(20);
@@ -170,7 +170,7 @@ class Ketua extends CI_Controller
       $pdf->Cell(45,7,$key->jalur,1,0,'C');
       $pdf->Cell(45,7,$key->nama_wali,1,0,'C');
       $pdf->Cell(45,7,$key->tahun_awal.'-'.$key->tahun_akhir,1,0,'C');
-      $pdf->Cell(45,7,date('d M Y H:i:s', strtotime($key->tanggal_daftar)),1,0,'C');
+      $pdf->Cell(45,7,date('d M Y', strtotime($key->tanggal_daftar)),1,0,'C');
     }
 
     $pdf->ln(20);
@@ -227,7 +227,7 @@ class Ketua extends CI_Controller
       $pdf->Cell(45,7,$key->jalur,1,0,'C');
       $pdf->Cell(45,7,$key->nama_wali,1,0,'C');
       $pdf->Cell(45,7,$key->tahun_awal.'-'.$key->tahun_akhir,1,0,'C');
-      $pdf->Cell(45,7,date('d M Y H:i:s', strtotime($key->tanggal_daftar)),1,0,'C');
+      $pdf->Cell(45,7,date('d M Y', strtotime($key->tanggal_daftar)),1,0,'C');
     }
 
     $pdf->ln(20);
@@ -283,7 +283,7 @@ class Ketua extends CI_Controller
       $pdf->Cell(45,7,$key->tempat_lahir_murid.', '.$key->tgl_lahir_murid,1,0,'C');
       $pdf->Cell(45,7,$key->jenis_kelamin,1,0,'C');
       $pdf->Cell(45,7,$key->nama_kelas,1,0,'C');
-      $pdf->Cell(45,7,date('d M Y H:i:s', strtotime($key->tanggal_terima)),1,0,'C');
+      $pdf->Cell(45,7,date('d M Y', strtotime($key->tanggal_terima)),1,0,'C');
     }
 
     $pdf->ln(20);

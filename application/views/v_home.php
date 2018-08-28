@@ -85,12 +85,12 @@
                         <div class="card-body">
                             <a>
                                 <div class="author">
-                                    <h4 class="card-title">Suryatin, S.pd</h4>
+                                    <h4 class="card-title">Suryatin</h4>
                                     <h6 class="card-category">Kepala PAUD</h6>
                                 </div>
                             </a>
                             <p class="card-description text-center">
-                              " Berbagi adalah Peduli. Mengajarkan anak kita untuk berbagi adalah mengajar mereka untuk berbelas kasih dan mengasihi. "
+                              " Seorang Guru menggandeng tangan, membuka pikiran, menyentuh hati, dan membentuk masa depan. Seorang Guru berpengaruh selamanya. Dia tidak pernah tahu kapan pengaruhnya berakhir<br> (Henry Adam) "
                             </p>
                         </div>
                         <!-- <div class="card-footer text-center">
@@ -109,12 +109,12 @@
                         <div class="card-body">
                             <a>
                                 <div class="author">
-                                    <h4 class="card-title">Amin Warsini, S.pd</h4>
+                                    <h4 class="card-title">Amin Warsini</h4>
                                     <h6 class="card-category">Sekertaris</h6>
                                 </div>
                             </a>
                             <p class="card-description text-center">
-                              " Anak-anak belajar Intergritas dari kita. Intergritas adalah apa yang kita katakan, apa yang kita lakukan dan apa yang kita katakan, kita lakukan. "
+                              " Kita tidak selalu bisa membangun masa depan bagi generasi muda. Tapi kita bisa membangun generasi muda untuk masa depan. ( Franklin D Roosevelt) "
                             </p>
                         </div>
                         <!-- <div class="card-footer text-center">
@@ -133,12 +133,12 @@
                         <div class="card-body">
                             <a>
                                 <div class="author">
-                                    <h4 class="card-title">Subur Isnawati, S.Pd</h4>
+                                    <h4 class="card-title">Subur Isnawati</h4>
                                     <h6 class="card-category">Bendahara</h6>
                                 </div>
                             </a>
                             <p class="card-description text-center">
-                              " Anak-anak sangat perlu tahu dan mendengan dengan cara yang dapat mereka pahami dan ingat. Biarkan anak-anak mengamati tindakan kebaikan Anda, karena itu dapat menular. "
+                              " Jangan pernah meragukan keberhasilan sekelompok kecil orang yang bertekad mengubah dunia karena hanya kelompok seperti itulah yang pernah berhasil melakukannya (Margaret Mead) "
                             </p>
                         </div>
                         <!-- <div class="card-footer text-center">
